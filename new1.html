@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>score eval</title>
+
+<style>
+p.one {
+    border-style: solid;
+    border-width: 5px;
+    padding: 25px;
+}
+
+div {
+    background-color: lightgrey;
+    width:300px;
+    border: 15px solid green;
+     padding: 25px;
+    text-align:center;
+    left-margin:100px;
+
+}
+
+#welcome {
+    padding: 25px;
+     
+    text-align: center;
+    color: green;
+}
+
+#wel {
+    padding: 25px;
+     
+    text-align: center;
+    color: green;
+}
+
+#we {
+    padding: 25px;
+     
+    text-align: center;
+    color: green;
+}
+
+
+</style>
+</head>
+<body style="background-color:powderblue">
+
+<p class="one" style=text-align:center;color:green>SCORE EVALUATOR</p>
+<p id="welcome"></p>
+</br>
+
+<script>
+
+var customerName = prompt("Please enter your name", "Enter yor fullname here");
+
+if (customerName!= null) {
+
+    document.getElementById("welcome").innerHTML =
+
+    "Hello " + customerName +"," ;
+     
+
+
+}
+else
+{
+	document.getElementById("welcome").innerHTML =
+
+    "Hello " ;
+}
+</script>
+</br>
+<div>This will help you to evaluate your total score on entering your individual scores !</div>
+<p id="wel"></p>
+<p id="we"></p>
+<script>
+      function add(p1, p2){
+    var x=p1+p2;
+    return x;
+}
+      var m1=Number(prompt("Please enter your sessional marks", "Enter yor marks here"));
+      var m2=Number(prompt("Please enter your university marks", "Enter yor marks here"));
+      var m=add(m1,m2);
+if(m1!=0 && m2!=0){
+       document.getElementById("wel").innerHTML =
+    "you scored total of " + m +"!" ;
+
+    if(m>75)
+    {
+           document.getElementById("we").innerHTML =
+
+    "Status :PASSED" ;
+      
+    }
+    else
+    {
+                document.getElementById("we").innerHTML =
+
+    "Status :FAILED" ;
+            
+    }
+   }
+else
+     document.getElementById("we").innerHTML ="Not entered both marks!";
+</script>
+</body>
+</html>
+
